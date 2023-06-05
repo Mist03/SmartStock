@@ -41,9 +41,9 @@ class WarehouseAccoutingReception : AppCompatActivity() {
                 listText7.clear()
                 val a = dataSnapshot.children
                 for (dsp in a) {
-                    var Date = (java.lang.String.valueOf(dsp.getValue()))
-                    val Datelist: List<String> = Date.split(",").map { it -> it.trim() }
-                    var datalist1 = Datelist.chunked(7)
+                    val datalisting = (java.lang.String.valueOf(dsp.getValue()))
+                    val Datelist: List<String> = datalisting.split(",").map { it -> it.trim() }
+                    val datalist1 = Datelist.chunked(7)
                     val datalist2 = datalist1.size
                     println(datalist1)
                     val sortedList = datalist1.sortedBy {

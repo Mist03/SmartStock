@@ -71,8 +71,8 @@ override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
             val a = dataSnapshot.children
             for (dsp in a) {
                 println(dsp)
-                val Date = (java.lang.String.valueOf(dsp.getValue()))
-                val Datelist: List<String> = Date.split(",").map { it -> it.trim()}
+                val datalisting = (java.lang.String.valueOf(dsp.getValue()))
+                val Datelist: List<String> = datalisting.split(",").map { it -> it.trim()}
                 val datalist1 = Datelist.chunked(6)
                 println(Datelist)
                 val datalist2 = datalist1.size

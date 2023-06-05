@@ -94,8 +94,10 @@ class ProvisionFragment : Fragment() {
     btn.setOnClickListener {
         var count2 = " "
         var etcount = count.text.toString()
-        if(etcount == ""){etcount = 0.toString()}
-        var etcount01 = count.text.toString()
+        if(etcount == ""){
+            etcount = 0.toString()
+        }
+        var etcount01 = etcount
         val selected1 = spinner01.selectedItem.toString()
         val selected2 = spinner02.selectedItem.toString()
         val selected3 = spinner03.selectedItem.toString()
@@ -143,7 +145,7 @@ class ProvisionFragment : Fragment() {
                 if (snapshot.value == null && D == 1){
                     count2 = "0"
                     etcount01 = (etcount01.toInt() + count2.toInt()).toString()
-                    if (etcount01.isNotBlank() && selected5.isNotBlank() && selected3.isNotBlank() &&
+                    if (etcount.isNotBlank() && selected5.isNotBlank() && selected3.isNotBlank() &&
                         selected4.isNotBlank() && selected2.isNotBlank() && selected1.isNotBlank()) {
                         databaseRef.child("Warehouse_Accounting_Cancellation/${selected1}/${selected2}/${selected3}/${selected4}/${selected5}/${time}/Дата")
                             .setValue(time)
@@ -164,7 +166,7 @@ class ProvisionFragment : Fragment() {
                 if(snapshot.value != null && D == 1){
                     count2 = ("${snapshot.value}")
                     etcount01 = (etcount01.toInt() + count2.toInt()).toString()
-                    if (etcount01.isNotBlank() && selected5.isNotBlank() && selected3.isNotBlank() &&
+                    if (etcount.isNotBlank() && selected5.isNotBlank() && selected3.isNotBlank() &&
                         selected4.isNotBlank() && selected2.isNotBlank() && selected1.isNotBlank()) {
                         databaseRef.child("Warehouse_Accounting_Cancellation/${selected1}/${selected2}/${selected3}/${selected4}/${selected5}/${time}/Дата")
                             .setValue(time)
