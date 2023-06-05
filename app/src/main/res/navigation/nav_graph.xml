@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/receiptFragment">
+
+    <fragment
+        android:id="@+id/receiptFragment"
+        android:name="com.example.smartstock.ReceiptFragment"
+        android:label="fragment_receipt"
+        tools:layout="@layout/fragment_receipt" />
+    <fragment
+        android:id="@+id/provisionFragment"
+        android:name="com.example.smartstock.ProvisionFragment"
+        android:label="fragment_provision"
+        tools:layout="@layout/fragment_provision" />
+    <fragment
+        android:id="@+id/warehouseFragment"
+        android:name="com.example.smartstock.WarehouseFragment"
+        android:label="fragment_warehouse"
+        tools:layout="@layout/fragment_warehouse" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.smartstock.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/accountingFragment"
+        android:name="com.example.smartstock.AccountingFragment"
+        android:label="fragment_accounting" />
+</navigation>

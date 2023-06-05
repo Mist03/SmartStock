@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "642660491280",
+    "project_id": "smartstock-1aa66",
+    "storage_bucket": "smartstock-1aa66.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642660491280:android:6e04ec7207118149e96a95",
+        "android_client_info": {
+          "package_name": "com.example.smartstock"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642660491280-6g63fpgicjlkuh7hgut7libqb1v4p7hu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDC3NZ0FUvt0bm8iCSvcB9R45M0EY2ZlFE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "642660491280-6g63fpgicjlkuh7hgut7libqb1v4p7hu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

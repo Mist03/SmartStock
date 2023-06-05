@@ -1,0 +1,94 @@
+<resources>
+    <string name="app_name">SmartStock</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="spinner1">
+        <item> </item>
+        <item>Круглая</item>
+        <item>Квадратная</item>
+        <item>Овальная</item>
+        <item>Прямоугольная</item>
+    </string-array>
+    <string-array name="spinner">
+        <item> </item>
+        <item>Бесшовная</item>
+        <item>Сварная</item>
+        <item>Электросварная со швом спиральным</item>
+        <item>Электросварная со швом прямым</item>
+        <item>Холоднокатаная</item>
+        <item>Горячекатаная</item>
+    </string-array>
+    <string-array name="spinner2">
+        <item> </item>
+        <item>Стальная</item>
+        <item>Оцинкованная</item>
+        <item>Чугунная</item>
+        <item>Медная</item>
+        <item>Металлопластиковые</item>
+        <item>Поливинилхлоридная</item>
+        <item>Полиэтиленовая</item>
+        <item>Полипропиленовая</item>
+        <item>Сшитый полиэтилен (PEX)</item>
+    </string-array>
+    <string-array name="spinner3">
+        <item> </item>
+        <item>Водогазопроводная</item>
+        <item>Универсальная</item>
+        <item>Для высокого давления</item>
+    </string-array>
+    <string-array name="spinner4">
+        <item> </item>
+        <item>10м</item>
+        <item>20м</item>
+        <item>30м</item>
+        <item>40м</item>
+        <item>50м</item>
+        <item>60м</item>
+        <item>80м</item>
+        <item>100м</item>
+    </string-array>
+
+    <string-array name="spinner01">
+        <item>Круглая</item>
+        <item>Квадратная</item>
+        <item>Овальная</item>
+        <item>Прямоугольная</item>
+    </string-array>
+    <string-array name="spinner02">
+        <item>Бесшовная</item>
+        <item>Сварная</item>
+        <item>Электросварная со швом спиральным</item>
+        <item>Электросварная со швом прямым</item>
+        <item>Холоднокатаная</item>
+        <item>Горячекатаная</item>
+    </string-array>
+    <string-array name="spinner03">
+        <item>Стальная</item>
+        <item>Оцинкованная</item>
+        <item>Чугунная</item>
+        <item>Медная</item>
+        <item>Металлопластиковые</item>
+        <item>Поливинилхлоридная</item>
+        <item>Полиэтиленовая</item>
+        <item>Полипропиленовая</item>
+        <item>Сшитый полиэтилен (PEX)</item>
+    </string-array>
+    <string-array name="spinner04">
+        <item>Водогазопроводная</item>
+        <item>Универсальная</item>
+        <item>Для высокого давления</item>
+    </string-array>
+    <string-array name="spinner05">
+        <item>10м</item>
+        <item>20м</item>
+        <item>30м</item>
+        <item>40м</item>
+        <item>50м</item>
+        <item>60м</item>
+        <item>80м</item>
+        <item>100м</item>
+    </string-array>
+
+
+</resources>
