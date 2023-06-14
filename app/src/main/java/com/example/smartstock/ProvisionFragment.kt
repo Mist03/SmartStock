@@ -117,7 +117,7 @@ class ProvisionFragment : Fragment() {
                     D = 0
 
                 }
-                if(snapshot.value != null){
+                if(snapshot.value != null && etcount != "0"){
                     count2 = ("${snapshot.value}")
                     if(count2.toInt() - etcount.toInt() >= 0){
                         etcount = (count2.toInt() - etcount.toInt()).toString()
@@ -133,6 +133,8 @@ class ProvisionFragment : Fragment() {
                         Toast.makeText(context, "На складе нет такого колличества!", Toast.LENGTH_SHORT).show()
                         D = 0
                     }
+                }else{
+                    Toast.makeText(context, "Нельзя списать 0", Toast.LENGTH_SHORT).show()
                 }
             }
             override fun onCancelled(error: DatabaseError) {}
@@ -146,7 +148,7 @@ class ProvisionFragment : Fragment() {
                     count2 = "0"
                     etcount01 = (etcount01.toInt() + count2.toInt()).toString()
                     if (etcount.isNotBlank() && selected5.isNotBlank() && selected3.isNotBlank() &&
-                        selected4.isNotBlank() && selected2.isNotBlank() && selected1.isNotBlank()) {
+                        selected4.isNotBlank() && selected2.isNotBlank() && selected1.isNotBlank() && etcount != "0") {
                         databaseRef.child("Warehouse_Accounting_Cancellation/${selected1}/${selected2}/${selected3}/${selected4}/${selected5}/${time}/Дата")
                             .setValue(time)
                         databaseRef.child("Warehouse_Accounting_Cancellation/${selected1}/${selected2}/${selected3}/${selected4}/${selected5}/${time}/Количество")
@@ -167,7 +169,7 @@ class ProvisionFragment : Fragment() {
                     count2 = ("${snapshot.value}")
                     etcount01 = (etcount01.toInt() + count2.toInt()).toString()
                     if (etcount.isNotBlank() && selected5.isNotBlank() && selected3.isNotBlank() &&
-                        selected4.isNotBlank() && selected2.isNotBlank() && selected1.isNotBlank()) {
+                        selected4.isNotBlank() && selected2.isNotBlank() && selected1.isNotBlank() && etcount != "0") {
                         databaseRef.child("Warehouse_Accounting_Cancellation/${selected1}/${selected2}/${selected3}/${selected4}/${selected5}/${time}/Дата")
                             .setValue(time)
                         databaseRef.child("Warehouse_Accounting_Cancellation/${selected1}/${selected2}/${selected3}/${selected4}/${selected5}/${time}/Количество")

@@ -132,7 +132,7 @@ class ReceiptFragment : Fragment() {
                 etcount = (etcount.toInt() + count2.toInt()).toString()
 //                println(etcount)
                 if (etcount.isNotBlank() && selected4.isNotBlank() && selected2.isNotBlank() && selected3.isNotBlank()
-                    && selected.isNotBlank() && selected1.isNotBlank()) {
+                    && selected.isNotBlank() && selected1.isNotBlank() && etcount != "0") {
                     databaseRef.child("Warehouse/${selected1}/${selected}/${selected2}/${selected3}/${selected4}/Количество")
                         .setValue(etcount)
                     databaseRef.child("Warehouse_Accounting_Reception/${selected1}/${selected}/${selected2}/${selected3}/${selected4}/${time}/Количество")
@@ -160,7 +160,7 @@ class ReceiptFragment : Fragment() {
                     databaseRef.child("Warehouse_Accounting_Reception/${selected1}/${selected}/${selected2}/${selected3}/${selected4}/${time}/Форма поперечного сечения")
                         .setValue(selected1)
                     Toast.makeText(context, "Добавлено", Toast.LENGTH_SHORT).show()
-                }else{Toast.makeText(context, "Заполните все поля", Toast.LENGTH_SHORT).show()}
+                }else{Toast.makeText(context, "Заполните все поля и количество не должно быть 0", Toast.LENGTH_SHORT).show()}
             }
             override fun onCancelled(error: DatabaseError) {}
         })
