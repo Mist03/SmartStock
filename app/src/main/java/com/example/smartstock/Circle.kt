@@ -39,11 +39,9 @@ class Circle : AppCompatActivity() {
                 println(dataSnapshot)
                 val a = dataSnapshot.children
                 for (dsp in a) {
-                    println(dsp)
                     val Date = (java.lang.String.valueOf(dsp.getValue()))
                     val Datelist: List<String> = Date.split(",").map { it -> it.trim()}
                     val datalist1 = Datelist.chunked(6)
-                    println(Datelist)
                     val datalist2 = datalist1.size
                     for(i in 0..datalist2-1){
                         listText1.add(datalist1[i][0].replace("Длина=", "").replace("{", " ")

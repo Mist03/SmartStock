@@ -22,7 +22,6 @@ class ProvisionFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_provision, container, false)
     }
 
@@ -49,7 +48,6 @@ class ProvisionFragment : Fragment() {
         R.array.spinner01,
         android.R.layout.simple_spinner_item
     ).also { adapter ->
-        // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner01.adapter = adapter
     }
@@ -58,7 +56,6 @@ class ProvisionFragment : Fragment() {
         R.array.spinner02,
         android.R.layout.simple_spinner_item
     ).also { adapter ->
-        // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner02.adapter = adapter
     }
@@ -67,7 +64,6 @@ class ProvisionFragment : Fragment() {
         R.array.spinner03,
         android.R.layout.simple_spinner_item
     ).also { adapter ->
-        // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner03.adapter = adapter
     }
@@ -76,7 +72,6 @@ class ProvisionFragment : Fragment() {
         R.array.spinner04,
         android.R.layout.simple_spinner_item
     ).also { adapter ->
-        // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner04.adapter = adapter
     }
@@ -85,7 +80,6 @@ class ProvisionFragment : Fragment() {
         R.array.spinner05,
         android.R.layout.simple_spinner_item
     ).also { adapter ->
-        // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner05.adapter = adapter
     }

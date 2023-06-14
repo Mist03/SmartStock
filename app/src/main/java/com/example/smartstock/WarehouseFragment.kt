@@ -3,13 +3,11 @@ package com.example.smartstock
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.text.TextUtils.replace
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.DataSnapshot
@@ -23,7 +21,6 @@ class WarehouseFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_warehouse, container, false)
     }
 
@@ -67,14 +64,11 @@ override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
             listText4.clear()
             listText5.clear()
             listText6.clear()
-            println(dataSnapshot)
             val a = dataSnapshot.children
             for (dsp in a) {
-                println(dsp)
                 val datalisting = (java.lang.String.valueOf(dsp.getValue()))
                 val Datelist: List<String> = datalisting.split(",").map { it -> it.trim()}
                 val datalist1 = Datelist.chunked(6)
-                println(Datelist)
                 val datalist2 = datalist1.size
                 for(i in 0..datalist2-1){
                     listText1.add(datalist1[i][0].replace("Длина=", "").replace("{", " ")

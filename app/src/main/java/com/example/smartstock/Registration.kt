@@ -51,7 +51,6 @@ class Registration : AppCompatActivity() {
         val pass = Pass.text.toString()
         val confirmPassword = ConfPass.text.toString()
 
-        // check pass
         if (email.isBlank() || pass.isBlank() || confirmPassword.isBlank() || firstName.isBlank() || lastName.isBlank()) {
             Toast.makeText(this, "Заполните все поля", Toast.LENGTH_SHORT).show()
             return

@@ -27,7 +27,6 @@ class ReceiptFragment : Fragment() {
     inflater: LayoutInflater, container: ViewGroup?,
     savedInstanceState: Bundle?,
 ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_receipt, container, false)
 
     }
@@ -46,13 +45,10 @@ class ReceiptFragment : Fragment() {
         println(currentDate)
 
 
-
     databaseRef = FirebaseDatabase.getInstance().getReference()
     database = FirebaseDatabase.getInstance()
     databaseReference = database?.reference!!.child("Warehouse")
     databaseReference01 = database?.reference!!.child("Warehouse_Accounting_Reception")
-
-
 
 
     ArrayAdapter.createFromResource(
@@ -60,7 +56,6 @@ class ReceiptFragment : Fragment() {
         R.array.spinner1,
         android.R.layout.simple_spinner_item
     ).also { adapter ->
-        // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner1.adapter = adapter
     }
@@ -69,7 +64,6 @@ class ReceiptFragment : Fragment() {
         R.array.spinner,
         android.R.layout.simple_spinner_item
     ).also { adapter ->
-        // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner.adapter = adapter
     }
@@ -78,7 +72,6 @@ class ReceiptFragment : Fragment() {
         R.array.spinner2,
         android.R.layout.simple_spinner_item
     ).also { adapter ->
-        // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner2.adapter = adapter
     }
@@ -87,7 +80,6 @@ class ReceiptFragment : Fragment() {
         R.array.spinner3,
         android.R.layout.simple_spinner_item
     ).also { adapter ->
-        // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner3.adapter = adapter
     }
@@ -96,7 +88,6 @@ class ReceiptFragment : Fragment() {
         R.array.spinner4,
         android.R.layout.simple_spinner_item
     ).also { adapter ->
-        // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner4.adapter = adapter
     }
@@ -121,16 +112,11 @@ class ReceiptFragment : Fragment() {
             ValueEventListener
         {
             override fun onDataChange(snapshot: DataSnapshot) {
-//                    count2 = ("${snapshot.value}")
                 if (snapshot.value == null){
-//                    println(snapshot.value)
                     count2 = "0"
-//                    println(count2)
                 }
                 if(snapshot.value != null){count2 = ("${snapshot.value}")}
-//                println(etcount)
                 etcount = (etcount.toInt() + count2.toInt()).toString()
-//                println(etcount)
                 if (etcount.isNotBlank() && selected4.isNotBlank() && selected2.isNotBlank() && selected3.isNotBlank()
                     && selected.isNotBlank() && selected1.isNotBlank() && etcount != "0") {
                     databaseRef.child("Warehouse/${selected1}/${selected}/${selected2}/${selected3}/${selected4}/Количество")
@@ -164,30 +150,6 @@ class ReceiptFragment : Fragment() {
             }
             override fun onCancelled(error: DatabaseError) {}
         })
-//        if (etcount.isNotBlank() && selected4.isNotBlank() && selected2.isNotBlank() && selected3.isNotBlank()
-//            && selected.isNotBlank() && selected1.isNotBlank()) {
-//            databaseRef.child("Warehouse/${selected1}/${selected}/${selected2}/${selected3}/${selected4}/Длина")
-//                .setValue(selected4)
-//            databaseRef.child("Warehouse_Accounting_Reception/${selected1}/${selected}/${selected2}/${selected3}/${selected4}/${time}/Длина")
-//                .setValue(selected4)
-//            databaseRef.child("Warehouse/${selected1}/${selected}/${selected2}/${selected3}/${selected4}/Материал")
-//                .setValue(selected2)
-//            databaseRef.child("Warehouse_Accounting_Reception/${selected1}/${selected}/${selected2}/${selected3}/${selected4}/${time}/Материал")
-//                .setValue(selected2)
-//            databaseRef.child("Warehouse/${selected1}/${selected}/${selected2}/${selected3}/${selected4}/Назначение")
-//                .setValue(selected3)
-//            databaseRef.child("Warehouse_Accounting_Reception/${selected1}/${selected}/${selected2}/${selected3}/${selected4}/${time}/Назначение")
-//                .setValue(selected3)
-//            databaseRef.child("Warehouse/${selected1}/${selected}/${selected2}/${selected3}/${selected4}/Тип производства")
-//                .setValue(selected)
-//            databaseRef.child("Warehouse_Accounting_Reception/${selected1}/${selected}/${selected2}/${selected3}/${selected4}/${time}/Тип производства")
-//                .setValue(selected)
-//            databaseRef.child("Warehouse/${selected1}/${selected}/${selected2}/${selected3}/${selected4}/Форма поперечного сечения")
-//                .setValue(selected1)
-//            databaseRef.child("Warehouse_Accounting_Reception/${selected1}/${selected}/${selected2}/${selected3}/${selected4}/${time}/Форма поперечного сечения")
-//                .setValue(selected1)
-//            Toast.makeText(context, "Добавлено", Toast.LENGTH_SHORT).show()
-//        }else{Toast.makeText(context, "Заполните все поля", Toast.LENGTH_SHORT).show()}
 
         spinner1.setSelection(0)
         spinner.setSelection(0)

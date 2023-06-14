@@ -1,6 +1,5 @@
 package com.example.smartstock
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -10,7 +9,6 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import java.time.LocalDate
 
 class WarehouseAccoutingReception : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,7 +43,6 @@ class WarehouseAccoutingReception : AppCompatActivity() {
                     val Datelist: List<String> = datalisting.split(",").map { it -> it.trim() }
                     val datalist1 = Datelist.chunked(7)
                     val datalist2 = datalist1.size
-                    println(datalist1)
                     val sortedList = datalist1.sortedBy {
                         it[0].replace("Дата=", "").replace("-",".")
                             .replace("{", " ").replace("}", " ")
